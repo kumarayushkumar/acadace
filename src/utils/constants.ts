@@ -1,3 +1,3 @@
 export const CONST = {
-  SLOGAN: 'Ace the Acadamics'
+  slogan: 'Ace the Acadamics'
 }
