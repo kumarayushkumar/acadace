@@ -1,0 +1,20 @@
+---
+import { Image } from 'astro:assets'
+import logo from '../images/logo/logo.png'
+---
+
+<header
+  class="flex items-center justify-between py-4 md:py-4 px-6 md:px-36 bg-accent">
+  <div class="flex gap-4 items-end">
+    <Image src={logo} alt="Logo" class="w-10" />
+    <h1 class="font-main font-semibold text-zinc-700 text-3xl">AcadAce</h1>
+  </div>
+  <nav class="hidden md:block text-zinc-700 font-medium font-main">
+    <ul class="flex gap-14">
+      <li class=""><a href="#services">Services</a></li>
+      <li class=""><a href="#domain">Domain</a></li>
+      <li class=""><a href="#contact-us">Contact</a></li>
+    </ul>
+  </nav>
+  <div></div>
+</header>

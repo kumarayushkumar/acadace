@@ -4,12 +4,14 @@ import Header from '../components/header.astro'
 import Footer from '../components/footer.astro'
 import Hero from '../components/hero.astro'
 import Services from '../components/services.astro'
+import Domain from '../components/domain.astro'
 ---
 
 <Layout title="Title">
   <Header />
   <Hero />
   <Services />
+  <Domain />
   <Footer />
 </Layout>
 
@@ -30,5 +32,13 @@ import Services from '../components/services.astro'
     font-family: 'Georgia';
     src: url('/fonts/Georgia.ttf') format('ttf');
     font-display: swap;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    color: #212b2a;
   }
 </style>

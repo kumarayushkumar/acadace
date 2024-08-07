@@ -9,6 +9,13 @@ export default {
       main: ['Helvetica-rounded', ...defaultTheme.fontFamily.sans],
       hightlight: ['Georgia', ...defaultTheme.fontFamily.serif],
     },
+    extend: {
+      colors: {
+        primary: '#013A85',
+        secondary: '#4AAFF7',
+        accent: '#FEFBEE',
+      }
+    }
   },
   plugins: []
 }
