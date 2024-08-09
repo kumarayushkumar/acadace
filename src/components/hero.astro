@@ -1,0 +1,45 @@
+---
+import { Image } from 'astro:assets'
+import illustration1 from '../images/illustrations/illustration-1.png'
+import illustration3 from '../images/illustrations/illustration-3.png'
+import illustration4 from '../images/illustrations/illustration-4.png'
+---
+
+<section
+  id="hero"
+  class="grid lg:grid-cols-2 px-6 sm:px-10 md:px-40 md:py-20 gap-6 md:gap-14">
+  <div class="lg:order-1 order-2 mt-6 md:mt-14">
+    <h1 class="text-2xl sm:text-3xl md:text-4xl font-semibold font-main">
+      Your Academic Support Partner
+    </h1>
+    <p class="font-medium mt-3 md:mt-4 text-lg">
+      Empowering Your College Journey
+    </p>
+    <div class="my-4 md:my-6 font-medium flex gap-4 md:gap-6">
+      <a
+        href="#services"
+        class="bg-slate-700 text-white text-xs sm:text-sm md:text-base rounded-md py-2 px-2 md:px-4 font-medium"
+        >Explore our Services</a
+      >
+      <a
+        href="#services"
+        class="bg-slate-700 text-white text-xs sm:text-sm md:text-base rounded-md py-2 px-2 md:px-4"
+        >Contact Us</a
+      >
+    </div>
+  </div>
+
+  <div class="lg:order-2 order-1 grid grid-cols-2 lg:gap-12 mt-10 md:mt-0">
+    <div>
+      <Image
+        src={illustration3}
+        alt="Boy using laptop"
+        class="w-64 sm:min-w-44 md:w-full md:min-w-44 lg:w-96"
+      />
+    </div>
+    <div class="flex flex-col gap-4 md:gap-12">
+      <Image src={illustration1} alt="Medal" class="w-28 sm:w-40 md:w-36" />
+      <Image src={illustration4} alt="Graduate cap" class="ps-10 w-30 sm:w-52" />
+    </div>
+  </div>
+</section>
