@@ -1,4 +1,6 @@
 ---
+import { CONST } from '../utils/constants'
+
 interface Props {
   title: string
 }
@@ -18,13 +20,13 @@ const { title } = Astro.props
     />
     <meta
       name="description"
-      content="AcadAce offers comprehensive academic support for college students, including minor and major projects, term papers, and certification courses. We deliver high-quality, well-researched work from start to finish, ensuring your academic success. Contact us today to excel in your studies!"
+      content={CONST.description}
     />
 
     <meta name="author" content="Acadace" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1, maximum-scale=1"
+      content="width=device-width, initial-scale=1, maximum-scale=5"
     />
     <meta name="robots" content="index, follow" />
 
@@ -32,9 +34,9 @@ const { title } = Astro.props
     <meta name="og:site_name" content="Acadace" />
     <meta name="og:title" content={title} />
     <meta name="og:type" content="website" />
-    <meta name="og:image" content="https://www.acadace.com/assets/image.jpg" />
+    <meta name="og:image" content="https://www.acadace.com/logo.png" />
     <meta name="og:url" content="https://www.acadace.com" />
-    <meta name="og:description" content="" />
+    <meta name="og:description" content={CONST.description} />
 
     <!-- Twitter Card Meta Tag -->
     <meta name="twitter:card" content="summary_large_image" />

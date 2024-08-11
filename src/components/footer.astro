@@ -21,27 +21,44 @@ const socialMedia = [
 ]
 ---
 
-<footer class="bg-accent text-zinc-500">
-  <div class="grid md:grid-cols-2 gap-6 md:gap-14">
-    <div class="flex flex-col gap-6 md:gap-14">
-      <div>
-        <h3>AcadAce</h3>
-        <p>{CONST.slogan}</p>
+<footer class="bg-accent text-zinc-500 pt-6 lg:pt-10 mt-4 md:mt-0">
+  <div class="grid md:grid-cols-2 gap-6 md:gap-14 px-6 md:px-14 lg:px-44">
+    <div class="flex flex-col gap-4 md:gap-14">
+      <div class="flex flex-col gap-1 md:gap-3">
+        <h3 class="text-xl md:text-2xl font-main">AcadAce</h3>
+        <p class="font-hightlight md:text-lg font-medium">{CONST.slogan}</p>
+      </div>
+
+      <div class="flex flex-col gap-1">
+        <h4 class="font-main">Reach out to us</h4>
+        <a href=`tel:+91${CONST.phone}` class="font-bold flex items-center"
+          ><Icon name={'call'} class="w-5 h-5 text-primary" />
+          <span class="px-1">Call</span> +91 {CONST.phone}</a
+        >
       </div>
     </div>
 
-    <div></div>
+    <div class="">
+      <h5 class="pb-2 text-lg font-main">Services</h5>
+      <ul class="font-medium flex gap-1 flex-col">
+        <li>Minor Projects</li>
+        <li>Major Projects</li>
+        <li>Term Papers</li>
+        <li>Certification Courses</li>
+      </ul>
+    </div>
   </div>
 
-  <div class="mt-8 grid md:grid-cols-2 px-4 md:px-14 lg:px-16 items-center">
-    <div class="text-center md:text-start order-2 md:order-1 mt-4 md:mt-0">
+  <div
+    class="mt-8 py-6 md:py-8 border-0 border-t-[0.9px] md:border-t-[1px] border-primary/30 grid md:grid-cols-2 px-6 md:px-14 lg:px-32 items-center gap-4">
+    <div class="text-center md:text-start order-2 md:order-1">
       <p>&copy; {new Date().getFullYear()} AcadAce. All rights reserved.</p>
     </div>
 
     <div
-      class="social-media flex justify-center md:justify-end gap-10 sm:gap-12 md:gap-14 lg:gap-12 text-whiteout order-1 md:order-2">
+      class="flex justify-center md:justify-end gap-10 sm:gap-12 md:gap-14 lg:gap-12 text-whiteout order-1 md:order-2">
       {
-        socialMedia.map((social, index) => (
+        socialMedia.map(social => (
           <a
             href={social.url}
             target="_blank"
@@ -55,6 +72,3 @@ const socialMedia = [
     </div>
   </div>
 </footer>
-
-<style is:inline>
-</style>
