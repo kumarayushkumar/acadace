@@ -1,0 +1,44 @@
+---
+import cap from '../images/illustrations/illustration-4.png'
+import trophy from '../images/illustrations/trophy.png'
+import clock from '../images/illustrations/clock.png'
+import { Image } from 'astro:assets'
+
+const whyUs = [
+  {
+    title: 'Experts in Your Field',
+    description:
+      'Our team consists of professionals who specialize in a wide range of academic domains like Web Tech, AI & ML, Data Science, IoT, Blockchain, and more. We understand the latest trends and requirements in these fields, ensuring your work not only meets academic standards but also stands out.',
+    image: cap
+  },
+  {
+    title: 'Top-Notch Quality',
+    description:
+      'Quality is our top priority. Every project we deliver is thoroughly researched, well-written, and tailored to meet your specific requirements. We ensure that your work is polished, professional, and ready to make a great impression on your professors.',
+    image: trophy
+  },
+  {
+    title: 'Always On Time',
+    description:
+      'We know that deadlines are crucial in academic life, and missing one can be a disaster. That’s why we guarantee timely delivery of all your projects and papers. You can count on us to meet your deadlines, no matter how tight they are.',
+    image: clock
+  }
+]
+---
+
+<section id="why-us" class="py-4 md:py-14 px-6 md:px-16 lg:px-36 my-6 md:my-0">
+  <div class="text-2xl md:text-3xl font-main">Why Acadace</div>
+  <div class="flex flex-col mt-6 py-4 gap-10 md:gap-6">
+    {
+      whyUs.map((item, index) => (
+        <div class="flex flex-col md:flex-row gap-6 md:gap-12 items-center">
+          <Image src={item.image} alt='Image' class="max-w-24 h-fit" />
+          <div class="flex gap-2 flex-col">
+            <div class="text-lg md:text-xl font-main">{item.title}</div>
+            <div class="text-base font-medium">{item.description}</div>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</section>
